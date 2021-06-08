@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html>
+<div class="container">
+{% include head.html %}
 
-<head>
-    {% include head.html %}
-</head>
-   
-    
-<header>
-    {% include header.html %}
-</header>
-
+{% include header.html %}
     
 <body>
 <div class="page-container">
@@ -35,11 +29,6 @@
 </div>
 </body>
 
-
-<footer>
-    {% include footer.html %}
-</footer>
-
-
-
+{% include footer.html %}
+</div>
 </html>
