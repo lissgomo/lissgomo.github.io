@@ -34,7 +34,6 @@ plugins:
   - jekyll-feed
 
 root: /_layout
-<link rel="stylesheet" href="{{ root_url }}/style.css">
 
 # Exclude from processing.
 # The following items will not be processed, by default.
