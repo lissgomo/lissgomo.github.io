@@ -29,6 +29,15 @@ https://fonts.google.com/specimen/Dancing+Script
     font-family: 'signikalight', sans-serif;
 }
 
+/* Whole Page
+----------------------------------------------- */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
 /* Header
 ----------------------------------------------- */
 header {
@@ -82,6 +91,8 @@ header {
 /* Body
 ----------------------------------------------- */
 
+html, body { height: 100%; }
+
 body {
     top: 140px;
     bottom: 140px;
@@ -91,7 +102,17 @@ body {
 
 .page-container {
     margin: 0px 50px;
+    flex: 1;
 }
+
+.page-wrap {
+    min-height: 100%;
+    margin-bottom: -142px; /* equal to footer height */
+  }
+  .page-wrap:after {
+    content: "";
+    display: block;
+  }
 
 img {
     margin: auto;
