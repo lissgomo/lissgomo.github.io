@@ -1,36 +1,37 @@
-// initial state: "we cannot draw"
-var weCanDraw = false;
-// initial state of the button: "not clicked"
-var isClicked = false;
-// here javascript finds and selects a button element
-var button = document.getElementsByTagName('button')[0];
+// LinkedIn Modal
+var modal = document.getElementById("modal-linkedin");
+var btn = document.getElementById("li-btn");
+var span = document.getElementsByClassName("close")[0];
 
-// when somebody clicks the button, script starts selecting
-button.onclick = function () {
-    if (isClicked) {
-        // if the button state is "clicked", then do this
-        button.classList = '';
-        isClicked = false;
-        weCanDraw = false;
-    } else {
-        // if the button state is "not clicked", then do this
-        button.classList.add('clicked');
-        isClicked = true;
-        weCanDraw = true;
-    }
-};
-
-function setup() {
-    // creating the canvas for painting
-    createCanvas(windowWidth - 20, windowHeight - 20);
+btn.onclick = function() {
+  modal.style.display = "block";
 }
 
-function draw() {
-    // font size
-    textSize(74);
+span.onclick = function() {
+  modal.style.display = "none";
+}
 
-    if (weCanDraw) {
-        // if weCanDraw is true then start drawing
-        text('🖤', mouseX, mouseY);
-    }
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+// Indeed Modal
+var modal = document.getElementById("modal-indeed");
+var btn = document.getElementById("id-btn");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
