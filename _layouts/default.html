@@ -2,12 +2,63 @@
 <html>
 <a id="top"></a>
 <div class="container">
-{% include head.html %}
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/plugins.js"></script>
+    <title>Lissenne Gomora's Porfolio</title>
+</head>
 
 {% include header.html %}
     
 <body>
 <div class="page-container">
+    <div class="about">
+        <a id="about"></a>
+        <h3>About</h3>
+        
+    </div>
+
+    <br><br>
+
+    <div class="skills">
+        <a id="skills"></a>
+        <h3>Skills</h3>
+        <ul>
+            <li>7 years of customer service and technical support through phone, email and chat.</li>
+            <li>Billingual (English/Spanish)</li>
+            <!-- <li></li> -->
+        </ul>
+        <dl>
+            <dt>LinkedIn Assessment Badges in:</dt>
+            <dd>Python</dd>
+            <dd>HTML</dd>
+            <dd>Microsoft Word</dd>
+            <dd><button id="li-btn">More..</button>
+                <div id="id-linkedin" class="modal-linkedin">
+                    <div class="linkedin-content">
+                    <span class="close-i">&times;</span>
+                    <p>LinkedIn</p>
+                    </div>
+                </div></dd>
+            <br>
+            <dt>Indeed Assesment Scores of Proficient & High Proficient</dt>
+            <dd>Technical support: Customer situations</dd>
+            <dd>Customer Service Skills</dd>
+            <dd>Attention to detail</dd>
+            <dd><button id="id-btn">More..</button>
+                <div id="id-indeed"  class="modal-indeed">
+                    <div class="indeed-content">
+                    <span class="close-i">&times;</span>
+                    <p>Indeed</p>
+                    </div>
+                </div></dd>
+        </dl>
+    </div>
+
+    <br><br>
+
     <div class="projects">
         <a id="projects"></a>
         <h3>Projects</h3>
@@ -24,57 +75,10 @@
         <dd>Language(s): Python</dd>
         <dd>Description: </dd>
     </div>
-    
-    <br><br>
-
-    <div class="skills">
-        <a id="skills"></a>
-        <h3>Skills</h3>
-        <ul>
-            <li>7 years of customer service and technical support through phone, email and chat.</li>
-            <li>Billingual (English/Spanish)</li>
-            <!-- <li></li> -->
-        </ul>
-        <dl>
-            <dt>LinkedIn Assessment Badges in:</dt>
-            <dd>Python</dd>
-            <dd>HTML</dd>
-            <dd>Microsoft Word</dd>
-            <dd><button id="li-btn">More..</button></dd>
-            <br>
-            <dt>Indeed Assesment Scores of Proficient & High Proficient</dt>
-            <dd>Technical support: Customer situations</dd>
-            <dd>Customer Service Skills</dd>
-            <dd>Attention to detail</dd>
-            <dd><button id="id-btn">More..</button></dd>
-        </dl>
-    </div>
-
-    <br><br>
-    
-    <div class="about">
-        <a id="about"></a>
-        <h3>About</h3>
-        
-    </div>
+   
 </div>
 </body>
 
-<!--
-<div id="modal-linkedin" class="modal">
-    <div class="linkedin-content">
-      <span class="close">&times;</span>
-      <p>WORDS</p>
-    </div>  
-</div>
-
-<div id="modal-indeed" class="modal">
-    <div class="indeed-content">
-      <span class="close">&times;</span>
-      <p>WORDS</p>
-    </div>  
-</div>
- -->
 
 {% include footer.html %}
 </div>
