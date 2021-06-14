@@ -1,37 +1,37 @@
 // LinkedIn Modal
-var modal = document.getElementById("modal-linkedin");
-var btn = document.getElementById("li-btn");
-var span = document.getElementsByClassName("close")[0];
+var modal1 = document.getElementById("id-linkedin");
+var btn1 = document.getElementById("li-btn");
+var span1 = document.getElementsByClassName("close-l")[0];
 
-btn.onclick = function() {
-  modal.style.display = "block";
+btn1.onclick = function() {
+  modal1.style.display = "block";
 }
 
-span.onclick = function() {
-  modal.style.display = "none";
+span1.onclick = function() {
+  modal1.style.display = "none";
 }
 
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  if (event.target == modal1) {
+    modal1.style.display = "none";
   }
 }
 
 // Indeed Modal
-var modal = document.getElementById("modal-indeed");
-var btn = document.getElementById("id-btn");
-var span = document.getElementsByClassName("close")[0];
+var modal2 = document.getElementById("id-indeed");
+var btn2 = document.getElementById("id-btn");
+var span2 = document.getElementsByClassName("close-i")[0];
 
-btn.onclick = function() {
-  modal.style.display = "block";
+btn2.onclick = function() {
+  modal2.style.display = "block";
 }
 
-span.onclick = function() {
-  modal.style.display = "none";
+span2.onclick = function() {
+  modal2.style.display = "none";
 }
 
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  if (event.target == modal2) {
+    modal2.style.display = "none";
   }
 }
