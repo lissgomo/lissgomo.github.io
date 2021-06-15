@@ -1,37 +1,38 @@
 // LinkedIn Modal
-var modal1 = document.getElementById("id-linkedin");
-var btn1 = document.getElementById("li-btn");
-var span1 = document.getElementsByClassName("close-l")[0];
+const modal = document.querySelector(".modal-link");
+const trigger = document.querySelector(".btn-link");
+const closeButton = document.querySelector(".close-link");
 
-btn1.onclick = function() {
-  modal1.style.display = "block";
+function toggleModal() {
+    modal.classList.toggle("show-modal");
 }
 
-span1.onclick = function() {
-  modal1.style.display = "none";
+function windowOnClick(event) {
+    if (event.target === modal) {
+        toggleModal();
+    }
 }
 
-window.onclick = function(event) {
-  if (event.target == modal1) {
-    modal1.style.display = "none";
-  }
-}
+trigger.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
+
 
 // Indeed Modal
-var modal2 = document.getElementById("id-indeed");
-var btn2 = document.getElementById("id-btn");
-var span2 = document.getElementsByClassName("close-i")[0];
+const modal = document.querySelector(".modal-in");
+const trigger = document.querySelector(".btn-in");
+const closeButton = document.querySelector(".close-in");
 
-btn2.onclick = function() {
-  modal2.style.display = "block";
+function toggleModal() {
+    modal.classList.toggle("show-modal");
 }
 
-span2.onclick = function() {
-  modal2.style.display = "none";
+function windowOnClick(event) {
+    if (event.target === modal) {
+        toggleModal();
+    }
 }
 
-window.onclick = function(event) {
-  if (event.target == modal2) {
-    modal2.style.display = "none";
-  }
-}
+trigger.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
