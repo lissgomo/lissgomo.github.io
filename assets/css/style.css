@@ -37,6 +37,34 @@ https://fonts.google.com/specimen/Dancing+Script
   min-height: 100vh;
 }
 
+/* Warning / Message
+/* Warning / Message
+----------------------------------------------- */
+
+.message {
+  background-color: #FF0000;
+  color: #fff;
+}
+
+p.msg-txt {
+  padding-top: 25px;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+}
+
+.blink {
+  animation: blinkingText 1.4s infinite;
+}
+
+@keyframes blinkingText{
+  0%{     color: #fff;    }
+  49%{    color: #fff; }
+  60%{    color: transparent; }
+  99%{    color:transparent;  }
+  100%{   color: #fff;    }
+}
+
 /* Header
 ----------------------------------------------- */
 header {
@@ -67,7 +95,7 @@ header {
   padding-right: 20px;
 }
 
-.navbar_links li{
+.navbar_links li {
   display: inline-block;
   padding: 0px 20px;
 }
@@ -90,7 +118,10 @@ font-weight: bold;
 /* Body
 ----------------------------------------------- */
 
-html, body { height: 100%; }
+html, 
+body { 
+  height: 100%; 
+}
 
 body {
   top: 140px;
@@ -120,8 +151,26 @@ h3 {
   text-decoration: none;
 }
 
+h4 {
+  font-size: 120%;
+  text-decoration: none;
+  margin: 0;
+}
+
 p {
   padding-bottom: 25px;
+  line-height: 1.5;
+}
+
+p.txt-about {
+  padding-bottom: 25px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+dl, dt, dd { 
+  line-height: 1.5;
+  margin: 0;
 }
 
 .page-container {
@@ -138,7 +187,7 @@ p {
   display: block;
 }
 
-.projects{
+.projects {
   background: rgba(144, 165, 169, 0.9);
   padding: 0px 10px 15px 10px;
   border: 2px solid #000;
@@ -146,89 +195,108 @@ p {
 
 }
 
-.skills{
+.skills {
   background: rgba(157, 223, 187, 0.9);
   padding: 0px 10px 15px 10px;
   border: 2px solid #000;
   border-radius: 25px;
 }
 
-.about{
+.about {
   background: rgba(196, 213, 167, 0.9);
   padding: 0px 10px 15px 10px;
   border: 2px solid #000;
   border-radius: 25px;
 }
 
-/* Modal
+/* Modal - LinkedIn
 ----------------------------------------------- */
-.modal-linkedin {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
+.modal-link {
+  position: fixed;
   left: 0;
   top: 0;
-  width: 100%; 
+  width: 100%;
   height: 100%;
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.content-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  border-radius: 0.5rem;
+}
+.close-link {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+}
+.close-link:hover {
+  background-color: darkgray;
+}
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 
-.modal-indeed {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
+
+/* Modal - Indeed
+----------------------------------------------- */
+.modal-in {
+  position: fixed;
   left: 0;
   top: 0;
-  width: 100%; 
+  width: 100%;
   height: 100%;
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.content-in {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  border-radius: 0.5rem;
+}
+.close-in {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+}
+.close-in:hover {
+  background-color: darkgray;
+}
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 
-.linkedin-content {
-background-color: #fefefe;
-margin: 15% auto; 
-padding: 20px;
-border: 1px solid #888;
-width: 80%; 
-}
 
-.indeed-content {
-  background-color: #fefefe;
-  margin: 15% auto; 
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; 
-}
-
-.close-l {
-color: #aaa;
-float: right;
-font-size: 28px;
-font-weight: bold;
-}
-
-.close-l:hover, .close-l:focus {
-color: black;
-text-decoration: none;
-cursor: pointer;
-}
-
-.close-i {
-color: #aaa;
-float: right;
-font-size: 28px;
-font-weight: bold;
-}
-
-.close-i:hover, .close-i:focus {
-color: black;
-text-decoration: none;
-cursor: pointer;
-}
 
 /* Footer
 ----------------------------------------------- */
