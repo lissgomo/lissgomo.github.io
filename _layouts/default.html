@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html>
 <a id="top"></a>
-<div class="container">
 
 {% include head.html %}
 
 {% include header.html %}
+
+{% include message.html %}
     
 <body>
 <div class="page-container">
     <div class="about">
         <a id="about"></a>
         <h3>About</h3>
-        
+            <h4>General</h4>
+                <p class="txt-about">
+                    Hello, my name is Lissenne Gomora. For a long time I've wanted to learn more about technology and apply those skills in the real world. Overtime, I've grasped a bit of HTML, CSS, Python and just how computers work in general. My last 2 PCs were built by me and they are both still running just fine. One day, I will fulfill this dream.
+                </p>
+
+                <dl>
+                    <dt><h4>Interests</h4></dt>
+                    <dd>&bull; Video games have also been a great passion of mine. The way the medium has worked to create interactive story telling through mechanics, environments and just plain text is fascinating to me.</dd>
+                    <dd>&bull; Geography & Vexillology is another interest that I like to test. Geoguessr is something I play. In this game, you are forced to figure out where you are dropped in a random area in Google Maps through signs and geographical differences. Having the knowledge and ability to point a country out of a map or a flag out of lineup is more appreciated by it's natives than you may realize.</dd>
+                    <dd>&bull; As a graduate (B.A) in Anthropology/Sociology, humanity in general is very intriguing to learn about. I feel like these are vital subjects to even learn a bit about just to better understand the individuals of a society and how our environments help shape who we are.</dd>
+                </dl>
     </div>
 
     <br><br>
@@ -20,32 +31,39 @@
     <div class="skills">
         <a id="skills"></a>
         <h3>Skills</h3>
-        <ul>
-            <li>7 years of customer service and technical support through phone, email and chat.</li>
-            <li>Billingual (English/Spanish)</li>
-            <!-- <li></li> -->
-        </ul>
         <dl>
-            <dt>LinkedIn Assessment Badges in:</dt>
+            <dd>&bull; 7 years CSR / Technical Support (Phone, Email and Chat)</dd>
+            <dd>&bull; Client-base: B2B & B2C</dd>    
+            <dd>&bull; Bilingual (English/Spanish)</dd>
+            <dd>&bull; WPM: 60</dd>
+            <dd>&bull; CRM: RightNow, SalesForce, Zoho</dd>
+            <dd>&bull; Ticket Management: Jira, ZenDesk</dd>
+            <dd>&bull; Microsoft Office: Word, Excel, PowerPoint, OneNote</dd>
+            <dd>&bull; AWS: Route 53</dd>
+            <dd>&bull; Computer Languages: HTML, CSS, Python</dd>
+        </dl>
+    <br>
+        <dl>
+            <dt><h4>LinkedIn Assessment Badges in:</h4></dt>
             <dd>Python</dd>
             <dd>HTML</dd>
             <dd>Microsoft Word</dd>
-            <dd><button id="li-btn">More..</button>
-                <div id="id-linkedin" class="modal-linkedin">
-                    <div class="linkedin-content">
-                    <span class="close-i">&times;</span>
+            <dd><button id="btn-link">More..</button>
+                <div class="modal-link">
+                    <div class="content-link">
+                    <span class="close-link">&times;</span>
                     <p>LinkedIn</p>
                     </div>
                 </div></dd>
-            <br>
-            <dt>Indeed Assesment Scores of Proficient & High Proficient</dt>
+    <br>
+            <dt><h4>Indeed Assessment Scores of Proficient & High Proficient</h4></dt>
             <dd>Technical support: Customer situations</dd>
             <dd>Customer Service Skills</dd>
             <dd>Attention to detail</dd>
-            <dd><button id="id-btn">More..</button>
-                <div id="id-indeed"  class="modal-indeed">
-                    <div class="indeed-content">
-                    <span class="close-i">&times;</span>
+            <dd><button id="btn-in">More..</button>
+                <div class="modal-in">
+                    <div class="content-in">
+                    <span class="close-in">&times;</span>
                     <p>Indeed</p>
                     </div>
                 </div></dd>
@@ -60,15 +78,15 @@
 
         <dt><a href="https://github.com/lissgomo/view-csv-img-urls-on-gsheets">CSV URLs to GSheets Preview</a></dt>
         <dd>Language(s): Python</dd>
-        <dd>Description: </dd>
+        <dd>Description: Script filters by "DealerID" to extract the first "Images" link and converts it to Google Sheets function to easy view all first images urls from a CSV file on Google Sheets.</dd>
         <br>
         <dt><a href="https://github.com/lissgomo/lissgomo.github.io">Portfolio Website</a></dt>
         <dd>Language(s): HTML/CSS</dd>
-        <dd>Description: </dd>
+        <dd>Description: Simple website to display my Portfolio </dd>
         <br>
         <dt><a href="https://github.com/lissgomo/short-programs">Short Programs</a></dt>
         <dd>Language(s): Python</dd>
-        <dd>Description: </dd>
+        <dd>Description: Collection of simple programs (example: draw random playing card)</dd>
     </div>
    
 </div>
